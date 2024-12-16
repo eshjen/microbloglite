@@ -1,0 +1,18 @@
+.xlogo {
+  width: 600px;
+  height: 600px;
+}
+
+.pageheadings{
+display: flex;
+align-items: flex-end;
+justify-content: flex-end;
+}
+
+.loginform{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20rem;
+   
+}

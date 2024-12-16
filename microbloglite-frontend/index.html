@@ -17,8 +17,9 @@
 
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="customlanding.css">
 
-    <title>Login to the Microblog Network!</title>
+    <title>Welcome to Your Microblog Network</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="./auth.js"></script>
@@ -29,11 +30,12 @@
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
+    <header class="pageheadings">
+        <h2>Happening now</h2>
+        <h3>join today.</h3>
     </header>
 
-    <main>
+    <main class="loginform">
 
         <form id="login">
             <div>
@@ -42,6 +44,7 @@
             </div>
 
             <div>
+
                 <label for="password">Password</label>
                 <input type="password" id="password" >
             </div>
@@ -50,10 +53,11 @@
         </form>
 
     </main>
-
-    <footer></footer>
+<img src="images/xlogo.png" class="xlogo" alt="Photot of X Logo">
+    <footer> &copy; 2024 X Corp.</footer>
 
     <!-- Page-specific code -->
     <script src="landing.js"></script>
+    <footer> </footer>
 </body>
 </html>
