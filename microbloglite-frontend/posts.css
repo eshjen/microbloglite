@@ -63,3 +63,8 @@ body {
     overflow-y: auto;
   }
   
+  #bgpic{
+    width: auto;
+    height: 350px;
+    border: solid black ;
+  }

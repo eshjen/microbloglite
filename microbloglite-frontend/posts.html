@@ -21,6 +21,7 @@
 
     <!-- Global CSS (CSS rules you want applied to all pages) -->
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="landing.css">
     
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css" />
@@ -34,7 +35,7 @@
       if (isLoggedIn() === false) window.location.replace("/");
     </script>
   </head>
-  <body>
+  <body >
     <header>
       
     </header>
@@ -96,9 +97,28 @@
             </ul>
           </div>
         </div>
-      <h1>feed</h1>
-      <div id="getPosts"></div> 
-      <div></div>
+    
+<!--       
+      
+      <div style="width: 800px;margin: auto; background-color: black ; min-height: 400px;">
+        <div style="text-align: center;">
+            <img src="images/bgpic3.webp" alt="Powerpuff Girls Background Pic" style="width: 100%;height: 330px;">
+            <img src="images/buttercup.avif" alt="Buttercup Profile Pic" style="width: 200px;height: 150px; margin-top: -200px; border-radius: 50%; border:solid white ">
+            <br>
+           <p style="color: white;"> buttercupx </p>
+        
+        </div>
+      </div> -->
+      <div>
+      <div class="card mb-3 ">
+        <img  id="bgpic" src="images/bgpic3.webp" class="card-img-top" alt="Powerfpuff Girls Background Pic">
+        <div class="card-body">
+          <h5 class="card-title">@buttercupx</h5>
+          <p class="card-text">Hi! Brave, Fearless, Loyal, Protective. </p>
+          <p class="card-text"><small class="text-body-secondary"><a href="createpost.html">Create a Post</a></small></p>
+        </div>
+      </div>
+      </div>
     </main>
 
     <footer></footer>
