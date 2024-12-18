@@ -31,21 +31,19 @@
     <script src="./auth.js"></script>
     <script>
       // If the user IS logged in, redirect to posts.html
-      if (isLoggedIn() === true) window.location.replace("posts.html");
+      if (isLoggedIn() === true) window.location.replace("posts.html"); //This is Fine
     </script>
   </head>
   <body>
-    <div> 
-    <header class="pageheadings">
-      <h2 id="indexheading" style="margin-top: 3rem;margin-right: 20rem;">Happening now 
-        <br>join today.</h2>
-    
-    </header>
-    
-</div>
+    <div>
+      <header class="pageheadings">
+        <h2 id="indexheading" style="margin-top: 3rem; margin-right: 20rem">Happening now <br />join today.</h2>
+      </header>
+    </div>
     <main>
       <div id="signin" class="container-fluid d-flex justify-content-end">
-        <form class="card p-4 bg-body-dark" style="width: 30rem; background-color: black ;">
+
+        <form id="login" class="card p-4 bg-body-dark" style="width: 30rem; background-color: black">
           <div class="mb-3">
             <label for="username">Username</label>
             <input id="username" class="form-control" type="text" required />
@@ -59,23 +57,27 @@
             <input class="form-check-input" type="checkbox" id="rememberme" />
             <label class="form-check-label" for="rememberme"> Remember Me? </label>
           </div>
-          <button class="btn btn-outline-dark">Sign In</button>
+
+          <button type="button " id="loginButton" class="btn btn-outline-dark">Sign In</button>
           <br />
           <p style="text-align: center">OR</p>
           <br />
-        
-           <a href="registration.html" id="createAccountBtn" class="btn btn-outline-dark" style="margin-top: -1rem;">Create Account</a>
+
+          <a href="registration.html" id="createAccountBtn" class="btn btn-outline-dark" style="margin-top: -1rem"
+            >Create Account</a
+          >
           <div id="createAccountBlock" class="form-text">
             By signing up, you agree to the Terms of Service and Privacy Policy in cookie use.
           </div>
         </form>
+        
       </div>
     </main>
     <img src="images/xlogo.png" class="xlogo" alt="Photo of X Logo" />
     <footer>&copy; 2024 X Corp.</footer>
 
     <!-- Page-specific code -->
-    <script src="landing.js"></script>
-    <footer></footer>
+    <script src="landing.js" ></script>
+   
   </body>
 </html>

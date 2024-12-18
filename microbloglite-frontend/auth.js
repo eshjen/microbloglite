@@ -40,6 +40,7 @@ function login (loginData) {
             // This is required for endpoints expecting us to send
             // JSON data.
             "Content-Type": "application/json",
+            Authorization: `Bearer ${loginData.token}`
         },
         body: JSON.stringify(loginData),
     };
