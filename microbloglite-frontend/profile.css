@@ -34,3 +34,17 @@
   #sidebar{
 margin-left: 0;
   }
+
+  #feed{
+    width: 40rem;
+  }
+
+  .nav-link:focus, .nav-link active{
+    outline: none;
+    box-shadow: none;
+  }
+
+  .nav-link active{
+    color: white;
+    background-color: black;
+  }

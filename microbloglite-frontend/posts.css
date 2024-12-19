@@ -27,7 +27,7 @@ body {
   .btn-toggle:hover,
   .btn-toggle:focus {
     color: rgba(var(--bs-emphasis-color-rgb), .85);
-    background-color: var(--bs-tertiary-bg);
+    background-color: var(--bs-teritary-bg);
   }
   
   .btn-toggle::before {
@@ -67,4 +67,8 @@ body {
     width: auto;
     height: 350px;
     border: solid black ;
+  }
+
+  #feedContainter{
+    width: 40rem;
   }

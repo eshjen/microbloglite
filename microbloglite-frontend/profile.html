@@ -20,18 +20,18 @@
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="landing.css" />
     <link rel="stylesheet" href="profile.css" />
+    <script src="auth.js"></script>
   </head>
 
   <body>
     <main>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
-          
-<!-- sidebar -->
-          <div id="sidebar" class="col-md-3">
+          <!-- sidebar -->
+          <div id="sidebar" class="col-md-3 ms-0">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light vh-100" style="width: 280px">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <img src="images/xlogo.png" alt="X logo" style="height: 1rem; margin-left: 4rem" />
+                <img src="images/xlogo.png" alt="X logo" style="height: 1rem; margin-left: 7rem" />
               </a>
               <hr />
               <ul class="nav nav-pills flex-column mb-auto">
@@ -100,15 +100,15 @@
                   <li><a class="dropdown-item" href="#">Privacy</a></li>
                   <li><a class="dropdown-item" href="#">Switch Profile</a></li>
                   <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  <li><a class="dropdown-item" id="logout">Sign out</a></li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Right side -->
-          <div class="col-md-8">
-            <div class="feedContainer">
+          <!-- middle -->
+          <div class="col-md-5">
+            <div id="feed" class="feedContainer">
               <div class="profileCard">
                 <img id="pfp" src="images/buttercup.avif" alt="Buttercup Profile Picture" />
                 <div>
@@ -157,7 +157,47 @@
             </div>
           </div>
         </div>
+        <!-- right side -->
+        <div class="col-md-4">
+          <div class="who-to-follow-section">
+            <h3>Who to follow</h3>
+            <ul class="who-to-follow-list">
+              <li class="who-to-follow-item">
+                <div class="user-info">
+                  <img src="images/user1.jpg" alt="User 1" class="user-avatar">
+                  <div class="user-details">
+                    <h5 class="username">@user1</h5>
+                    <p class="user-bio">Tech enthusiast | Developer | Coffee lover</p>
+                  </div>
+                </div>
+                <button class="follow-btn">Follow</button>
+              </li>
+              <li class="who-to-follow-item">
+                <div class="user-info">
+                  <img src="images/user2.jpg" alt="User 2" class="user-avatar">
+                  <div class="user-details">
+                    <h5 class="username">@user2</h5>
+                    <p class="user-bio">Travel blogger | Adventure seeker</p>
+                  </div>
+                </div>
+                <button class="follow-btn">Follow</button>
+              </li>
+              <li class="who-to-follow-item">
+                <div class="user-info">
+                  <img src="images/user3.jpg" alt="User 3" class="user-avatar">
+                  <div class="user-details">
+                    <h5 class="username">@user3</h5>
+                    <p class="user-bio">Photographer | Nature lover | Explorer</p>
+                  </div>
+                </div>
+                <button class="follow-btn">Follow</button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
       </div>
     </main>
+  
   </body>
 </html>
