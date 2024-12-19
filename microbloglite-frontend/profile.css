@@ -1,0 +1,31 @@
+.profileCard {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: black;
+   
+  }
+
+  .profileCard img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profileCard div h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    
+  }
+  
+  .profileCard div p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+
+  #pfp{
+    width: 4rem;
+    border-radius: 50%;
+    border-color: #ddd;
+  }

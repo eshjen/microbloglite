@@ -19,88 +19,145 @@
     <!-- Global CSS (CSS rules you want applied to all pages) -->
     <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="landing.css" />
-    <link rel="stylesheet" href="createpost.css">
+    <link rel="stylesheet" href="profile.css" />
   </head>
   <body>
     <header>
-        <div class="d-flex flex-nowrap">
-            <h1 class="visually-hidden">Sidebars examples</h1>
-      
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light vh-100" style="width: 280px">
-              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
-                <span class="fs-4"> <img src="images/xlogo.png" alt="X logo" style="height: 1rem; margin-left: 4rem" /></span>
+      <div class="d-flex flex-nowrap">
+        <h1 class="visually-hidden">Sidebars examples</h1>
+
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light vh-100" style="width: 280px">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+            <span class="fs-4">
+              <img src="images/xlogo.png" alt="X logo" style="height: 1rem; margin-left: 4rem"
+            /></span>
+          </a>
+          <hr />
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="profile.html" class="nav-link active" aria-current="page">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="" /></svg>
+                Profile
               </a>
-              <hr />
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                  <a href="#" class="nav-link active" aria-current="page">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="" /></svg>
-                    Profile
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
-                    Messages
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
-                    Following
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
-                    Followers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
-                    Bookmarks
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
-                    Lists
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
-                    Settings
-                  </a>
-                </li>
-              </ul>
-              <hr />
-              <div class="dropdown">
-                <a
-                  href="#"
-                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="images/buttercup.avif"
-                    alt="Buttercup Profile Pic"
-                    width="25"
-                    height="25"
-                    class="rounded-circle me-2"
-                  />
-                  <strong>buttercupx</strong>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li><a class="dropdown-item" href="#">Privacy</a></li>
-                  <li><a class="dropdown-item" href="#">Switch Profile</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
+                Messages
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
+                Following
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
+                Followers
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table" /></svg>
+                Bookmarks
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
+                Lists
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle" /></svg>
+                Settings
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <div class="dropdown">
+            <a
+              href="#"
+              class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="images/buttercup.avif"
+                alt="Buttercup Profile Pic"
+                width="25"
+                height="25"
+                class="rounded-circle me-2"
+              />
+              <strong>buttercupx</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Privacy</a></li>
+              <li><a class="dropdown-item" href="#">Switch Profile</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container mt-4 feed-container">
+        
+        <div class="profileCard">
+          <img id="pfp" src="images/buttercup.avif" alt="Buttercup Profile Picture" />
+          <div>
+            <h5>@buttercupx</h5>
+            <p>Welcome to your feed!</p>
+          </div>
+        </div>
+
+        
+        <div class="createPostForm">
+          <div class="card">
+            <div class="card-body">
+              <h5>Create a new post</h5>
+              <textarea class="form-control" rows="3" placeholder="What's happening?"></textarea>
+              <button class="btn btn-outline-dark mt-2">Post</button>
             </div>
           </div>
-    </header>
+        </div>
+
+        
+        <div class="postCard">
+          <div class="card-body">
+            <h5>Username</h5>
+            <p>This is a sample post. It's a simple text post that could be anything.</p>
+          </div>
+          <div class="cardFooter">
+            <div class="post-footer-buttons d-flex justify-content-between">
+              <button class="btn btn-outline-primary">Like</button>
+              <button class="btn btn-outline-secondary">Comment</button>
+              <button class="btn btn-outline-success">Share</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="postCard">
+          <div class="card-body">
+            <h5>Username</h5>
+            <p>Another post with a fun image and caption. Posts can include text, images, or links!</p>
+          </div>
+          <div class="cardFooter">
+            <div class="post-footer-buttons d-flex justify-content-between">
+              <button class="btn btn-outline-primary">Like</button>
+              <button class="btn btn-outline-secondary">Comment</button>
+              <button class="btn btn-outline-success">Share</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
