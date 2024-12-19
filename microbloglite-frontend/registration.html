@@ -16,16 +16,23 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="landing.css" />
-    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="registration.css" />
   </head>
   <body>
-   <header><a href="index.html"><img src="images/xlogo.png" alt="X logo" style="height: 3rem; margin-left: 4rem;margin-top: 1rem; justify-items: center;"></a></header>
+    <header>
+      <a href="index.html"
+        ><img
+          src="images/xlogo.png"
+          alt="X logo"
+          style="height: 3rem; margin-left: 4rem; margin-top: 1rem; justify-items: center"
+      /></a>
+    </header>
     <main class="container-fluid mt-4 d-flex justify-content-center align-items-center">
-      <div class="card p-4" style="width: 30rem; background-color: black; margin-bottom: 3rem;">
-        <h3 style="margin-bottom: 2rem;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;">Create Your Account</h3>
-        <form method="POST" action="/submit">
-          
-
+      <div class="card p-4" style="width: 30rem; background-color: black; margin-bottom: 3rem">
+        <h3 style="margin-bottom: 2rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+          Create Your Account
+        </h3>
+        <form onsubmit="registerUser(event)">
           <div class="mb-3">
             <label for="name">Name</label>
             <input id="name" class="form-control" name="name" required />
@@ -53,14 +60,14 @@
 
           <div class="mb-3">
             <label for="re-enterpassword">Re-Enter Password</label>
-            <input
+            <!-- <input
               id="re-enterpassword"
               class="form-control"
               type="password"
               name="re-enterpassword"
               required
               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$"
-            />
+            /> -->
 
             <div class="form-text">
               Password must be:
@@ -75,13 +82,12 @@
           </div>
 
           <div class="mb-3 text-center">
-            <button type="submit" class="btn btn-outline-dark" style="width: 15rem;">Create Account</button>
+            <button type="submit" class="btn btn-outline-dark" style="width: 15rem">Create Account</button>
           </div>
         </form>
       </div>
-
+      <script src="landing.js"></script>
     </main>
     <footer>&copy; 2024 X Corp.</footer>
-
   </body>
 </html>
