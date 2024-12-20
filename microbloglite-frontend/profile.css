@@ -91,9 +91,13 @@ margin-left: 0;
   }
   
 
-likeButton, commentButton, shareButton, deleteButton{
-  border: purple;
-}
+  .card.body{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* background:linear-gradient(to bottom, #808080,#000000);
+    color: white; */
+    
+  }
 
 #feedContainer{
   width: 40rem;
