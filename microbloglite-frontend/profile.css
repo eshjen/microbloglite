@@ -48,3 +48,45 @@ margin-left: 0;
     color: white;
     background-color: black;
   }
+
+  #pfp1{
+    height: 3rem;
+    border: solid white;
+    border-radius: 50%;
+  }
+
+  #pfp2{
+    height:3rem;
+    width: 3rem;
+    border: solid white;
+    border-radius: 50%;
+  }
+
+
+  h5{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  #sidebar {
+    flex: 0 0 280px;  /* Sidebar fixed width */
+  }
+  
+  .col-md-5 {
+    flex: 1;  /* Feed content takes up the remaining space */
+  }
+  
+  .col-md-4 {
+    flex: 0 0 320px;  /* Right column takes a fixed width */
+    overflow-y: auto;  /* Ensure content scrolls if needed */
+  }
+  
