@@ -78,15 +78,23 @@ margin-left: 0;
   }
   
   #sidebar {
-    flex: 0 0 280px;  /* Sidebar fixed width */
+    flex: 0 0 280px;  
   }
   
   .col-md-5 {
-    flex: 1;  /* Feed content takes up the remaining space */
+    flex: 1;  
   }
   
   .col-md-4 {
-    flex: 0 0 320px;  /* Right column takes a fixed width */
-    overflow-y: auto;  /* Ensure content scrolls if needed */
+    flex: 0 0 320px; 
+    overflow-y: auto;  
   }
   
+
+likeButton, commentButton, shareButton, deleteButton{
+  border: purple;
+}
+
+#feedContainer{
+  width: 40rem;
+}

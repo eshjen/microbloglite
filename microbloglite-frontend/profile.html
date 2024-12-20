@@ -26,10 +26,10 @@
   <body>
     <main>
       <div class="container-fluid">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           <!-- sidebar -->
           <div id="sidebar" class="col-md-3 ms-0">
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light vh-100" style="width: 280px">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <img src="images/xlogo.png" alt="X logo" style="height: 1rem; margin-left: 7rem" />
               </a>
@@ -107,8 +107,8 @@
           </div>
 
           <!-- middle -->
-          <div class="col-md-5">
-            <div id="feed" class="feedContainer">
+          <div class="col-md-5 d-flex flex-column align-items-center">
+            <div id="feed" class="feedContainer" style="margin-left: 8rem">
               <div class="profileCard">
                 <img id="pfp" src="images/buttercup.avif" alt="Buttercup Profile Picture" />
                 <div>
@@ -160,36 +160,34 @@
         <!-- right side -->
         <div class="col-md-4">
           <div class="whoToFollow">
-            <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Who to follow</h3>
-            <ul class="whoToFollowList">
-              <li class="whoToFollowItem">
-                <div class="userInfo">
-                  <img  id="pfp1" src="images/bubbles.webp" alt="Bubbles Profile Pic" class="userAvatar">
-                  <div class="userDetails">
-                    <h5 class="username">@bubbles</h5>
-                    <p class="userBio"> Kind | Sweet | Sugar</p>
+            <h3 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Who to follow</h3>
+            <div class="card" style="margin-top: 2rem">
+              <ul class="whoToFollowList">
+                <li class="whoToFollowItem">
+                  <div class="userInfo">
+                    <img id="pfp1" src="images/bubbles.webp" alt="Bubbles Profile Pic" class="userAvatar" />
+                    <div class="userDetails">
+                      <h5 class="username">@bubbles</h5>
+                      <p class="userBio">Kind | Sweet | Sugar</p>
+                    </div>
                   </div>
-                </div>
-                <button class="followBtn btn btn-outline-dark mt-2">Follow</button>
-                
-              </li>
-              <li class="whoToFollowItem">
-                <div class="userInfo">
-                  <img id="pfp2" src="images/blossom.png" alt="Blossom Profile Pic" class="userAvatar">
-                  <div class="userDetails">
-                    <h5 class="username">@blossom</h5>
-                    <p class="userBio"> Leader | Photographic Memory</p>
+                  <button class="followBtn btn btn-outline-dark mt-2">Follow</button>
+                </li>
+                <li class="whoToFollowItem">
+                  <div class="userInfo">
+                    <img id="pfp2" src="images/blossom.png" alt="Blossom Profile Pic" class="userAvatar" style="margin-top: 1rem;"/>
+                    <div class="userDetails">
+                      <h5 class="username">@blossom</h5>
+                      <p class="userBio">Leader | Photographic Memory</p>
+                    </div>
                   </div>
-                </div>
-                <button class="followBtn btn btn-outline-dark mt-2">Follow</button>
-              </li>
-            
-            </ul>
+                  <button class="followBtn btn btn-outline-dark mt-2">Follow</button>
+                </li>
+              </ul>
+            </div>
           </div>
-
         </div>
       </div>
     </main>
-  
   </body>
 </html>
