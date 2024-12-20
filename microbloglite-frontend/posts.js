@@ -2,11 +2,15 @@
 
 "use strict";
 
-// function getPosts() {}
 
+
+
+
+// This function sends a POST request to create a new post
 function postPost() {
   const postContent = document.querySelector("#postContent").value;
   console.log(getLoginData().token);
+
   const options = {
     method: "POST",
     headers: {
@@ -17,61 +21,55 @@ function postPost() {
       text: postContent,
     }),
   };
+
   fetch(apiBaseURL + "/api/posts", options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      window.location.reload();
+      window.location.reload(); 
     });
 }
 
-// function loadPosts() {
-//   const loginData = getLoginData();
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Authorization: `Bearer ${loginData.token}`,
-//     },
-//   };
-//   fetch(apiBaseURL + "/api/posts", options)
-//     .then((response) => response.json())
-//     .then((posts) => {
-//       console.log(posts);
-//       for (let post of posts) {
-//         buildCard(post, loginData.username);
-//       }
-//     });
-// }
-// loadPosts();
-
+// This function loads all posts from the API
 async function getAllPost() {
   const loginData = getLoginData();
   try {
-    let promise = fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
+    let response = await fetch(apiBaseURL + "/api/posts", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${loginData.token}`,
       },
     });
-    let response = await promise;
+
     let data = await response.json();
-    console.log(data);
-    buildCard(data);
+    console.log(data); 
+    
+    
+    if (Array.isArray(data)) {
+      data.forEach(post => {
+        buildCard(post); 
+      });
+    } else {
+      console.error("API response is not an array of posts.");
+    }
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching posts:", error);
   }
 }
 
-getAllPost();
-
+// Building the post cards
 function buildCard(info) {
   const postContainer = document.querySelector(".feedContainer");
 
+  
+  if (!postContainer) {
+    console.error("Feed container not found.");
+    return;
+  }
+
   const postCard = document.createElement("div");
   postCard.className = "postCard card";
-
 
   const cardBody = document.createElement("div");
   cardBody.className = "card-body";
@@ -87,24 +85,24 @@ function buildCard(info) {
 
   const likeButton = document.createElement("button");
   likeButton.innerText = "Like";
-  likeButton.className = "likeButton";
+  likeButton.className = "btn btn-outline-primary mx-2";
 
   const commentButton = document.createElement("button");
   commentButton.innerText = "Comment";
-  commentButton.className = "commentButton";
+  commentButton.className = "btn btn-outline-secondary mx-2";
 
   const shareButton = document.createElement("button");
   shareButton.innerText = "Share";
-  shareButton.className = "shareButton";
+  shareButton.className = "btn btn-outline-success mx-2";
 
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "Delete";
-  deleteButton.className = "deleteButton";
+  deleteButton.className = "btn btn-outline-danger mx-2";
   deleteButton.addEventListener("click", async () => {
     if (info._id) {
       const loginData = getLoginData();
       try {
-        let promise = fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/${info._id}`, {
+        let response = await fetch(`http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/${info._id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -112,12 +110,12 @@ function buildCard(info) {
           },
         });
 
-        let response = await promise;
         let data = await response.json();
         console.log(data);
 
         if (response.ok) {
-          console.log("Great work");
+          console.log("Post deleted successfully");
+          postCard.remove(); 
         }
       } catch (error) {
         console.error(error);
@@ -136,24 +134,5 @@ function buildCard(info) {
   postContainer.appendChild(postCard);
 }
 
-// loadPosts();
-
-// const loginData = getLoginData();
-//   try {
-//     let promise = fetch(apiBaseURL + "/api/posts", {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${loginData.token}`,
-//       },
-//     });
-//     let response = await promise;
-//     console.log(response)
-//     let data = await response.json();
-//     console.log(data);
-//     createPostCards(data);
-//   } catch (error) {
-//     console.error;
-//   }
-// }
-// getPosts();
+//function to load all posts when the page loads
+getAllPost();
