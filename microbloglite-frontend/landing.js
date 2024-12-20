@@ -50,4 +50,5 @@ async function registerUser(event) {
   } catch (error) {
     console.error("Error Code", error.message);
   }
+  window.location.href= '/index.html';
 }
