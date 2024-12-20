@@ -72,26 +72,20 @@ body {
     width: 40rem;
   }
 
-  /* #sidebar {
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100vh; 
-    z-index: 100; 
+  .card{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* background:linear-gradient(to bottom, #808080,#000000);
+    color: white; */
     
-    overflow-x: hidden;
-  } */
-  .sidebar {
-    position: fixed;   /* Fix the sidebar */
-    top: 0;            /* Align it to the top of the page */
-    left: 0;           /* Align it to the left side of the page */
-    width: 250px;      /* Set the width of the sidebar */
-    height: ;
-    height: 50vh;     /* Make it as tall as the viewport */
-    background-color: #333; /* Optional background color */
-    color: white;      /* Optional text color */
-    padding: 20px;     /* Optional padding */
-    z-index: 1000;     /* Ensure it stays above other elements */
   }
   
- 
+  
+ /* body{
+  background-image: url(images/bgpic.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin:0;
+  height: 100vh;
+ } */
