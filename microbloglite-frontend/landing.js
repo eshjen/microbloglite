@@ -35,7 +35,7 @@ async function registerUser(event) {
     email: document.getElementById("email").value.trim(),
     username: document.getElementById("username").value.trim(),
     password: document.getElementById("password").value.trim(),
-    
+  };
   try {
     let promise = fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/users", {
       method: "POST",
