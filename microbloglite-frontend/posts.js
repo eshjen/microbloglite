@@ -2,10 +2,6 @@
 
 "use strict";
 
-
-
-
-
 // This function sends a POST request to create a new post
 function postPost() {
   const postContent = document.querySelector("#postContent").value;
@@ -79,9 +75,13 @@ function buildCard(info) {
   h5.textContent = info.username;
   cardBody.appendChild(h5);
 
-  const p = document.createElement("p");
-  p.textContent = info.text;
-  cardBody.appendChild(p);
+  const h6 = document.createElement("h6");
+  h6.textContent = info.text;
+  cardBody.appendChild(h6);
+
+  const p =document.createElement("p")
+  p.textContent = info.createdAt;
+  cardBody.appendChild(p)
 
   const likeButton = document.createElement("button");
   likeButton.innerText = "Like";
